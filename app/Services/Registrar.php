@@ -18,12 +18,14 @@ class Registrar implements RegistrarContract {
 			'name' => 'required|max:255',
 			'email' => 'required|email|max:255|unique:users',
 			'password' => 'required|confirmed|min:6',
+			'city' => 'max:50',
 		]);
 	}
 
 	/**
 	 * Create a new user instance after a valid registration.
 	 *
+	 * Also create profile attached to user.
 	 * @param  array  $data
 	 * @return User
 	 */
@@ -33,7 +35,9 @@ class Registrar implements RegistrarContract {
 			'name' => $data['name'],
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
+			'city' => $data['city'],
 		]);
+
 	}
 
 }

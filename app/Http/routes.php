@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::resource('movies', 'MovieController');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

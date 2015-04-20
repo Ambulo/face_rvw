@@ -2,12 +2,13 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model {
+class Photo extends Model {
 
-	protected $fillable = [
-		'city'
-		'user_id'
-		];
+	public function movie()
+
+	{
+		return $this->belongsTo('App\Movie');
+	}
 
 	public function user()
 
