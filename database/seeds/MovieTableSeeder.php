@@ -19,6 +19,7 @@ class MovieTableSeeder extends Seeder {
             Movie::create(array(
                 'title' => $faker->sentence($nbWords = $faker->randomDigitNotNull),
                 'year' => $faker->numberBetween($min = 1900, $max = 2015),
+                'posterLoc' => $faker->imageUrl($width = 180, $height = 240),
             ));
         }
  
