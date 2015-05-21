@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1">
 			<div class="panel panel-default">
-				<div class="panel-heading">Movies</div>
+				<div class="panel-heading">{{ $movie->title }}</div>
 					<div class="row">
 
 						<?php $i = 0 ?>
@@ -14,7 +14,7 @@
 
 							<div class="row">
 
-							@foreach ($movies as $movie)
+							@foreach ($photos as $photo)
 
 							@if (($i % 3) == 0)
 
@@ -27,7 +27,7 @@
 							@endif
 
 									<div class="thumbnail">
-										<a href="{{ url('/movies', $movie->id) }}"> {!! HTML::image($movie->posterLoc, $movie->title, array('class' => 'img-reponsive')) !!} </a>
+										<a href="{{ url('/movies', $movie->id) }}"> {!! HTML::image($movie->posterLoc, $user->name, array('class' => 'img-reponsive')) !!} </a>
 										<div class="caption text-center">
 											<a href="{{ url('/movies', $movie->id) }}"> {{ $movie->title }} </a>
 										</div>
@@ -51,7 +51,7 @@
 					</div>
 
 					<div class="text-center">
-						{!! $movies->render() !!}
+						{!! $photos->render() !!}
 					</div>
 			</div>
 		</div>

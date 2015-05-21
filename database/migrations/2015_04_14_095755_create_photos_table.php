@@ -17,6 +17,7 @@ class CreatePhotosTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id')->unsigned();
 			$table->integer('movie_id')->unsigned();
+			$table->string('photo_loc');
 			$table->timestamps();
 
 			$table->foreign('user_id')

@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Movie;
+use App\Photo;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\HttpResponse;
@@ -30,7 +32,13 @@ class MovieController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$movie = Movie::findOrFail($id);
+
+		$photos = Photo::where('movie_id', $id)->paginate(24);
+
+		$users = Users::
+
+		return view('movies.show', compact('movie'), compact('photos'));
 	}
 
 }

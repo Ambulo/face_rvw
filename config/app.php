@@ -146,6 +146,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		'Aws\Laravel\AwsServiceProvider',
+
 	],
 
 	/*
@@ -196,6 +198,8 @@ return [
 
 		'Form'=> 'Illuminate\Html\FormFacade', 
 		'HTML'=> 'Illuminate\Html\HtmlFacade',
+		
+		'AWS' => 'Aws\Laravel\AwsFacade',
 
 	],
 

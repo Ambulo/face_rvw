@@ -22,7 +22,7 @@ class UserTableSeeder extends Seeder {
         ));
  
  
-        for($i = 0; $i < 99; $i++){
+        for($i = 0; $i < 199; $i++){
             User::create(array(
                 'name' => $faker->userName,
                 'email' => $faker->email,
