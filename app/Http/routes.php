@@ -15,6 +15,10 @@ Route::get('/', 'HomeController@index');
 
 Route::resource('movies', 'MovieController');
 
+Route::get('upload', function(){
+	return View::make('photos.create');
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

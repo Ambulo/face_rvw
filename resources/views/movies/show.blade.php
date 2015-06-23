@@ -27,7 +27,7 @@
 							@endif
 
 									<div class="thumbnail">
-										<a href="{{ url('/movies', $movie->id) }}"> {!! HTML::image($movie->posterLoc, $user->name, array('class' => 'img-reponsive')) !!} </a>
+										<a href="{{ url('/movies', $movie->id) }}"> {!! HTML::image($photo->posterLoc, $user->name, array('class' => 'img-reponsive')) !!} </a>
 										<div class="caption text-center">
 											<a href="{{ url('/movies', $movie->id) }}"> {{ $movie->title }} </a>
 										</div>

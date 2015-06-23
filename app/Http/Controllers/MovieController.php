@@ -36,7 +36,7 @@ class MovieController extends Controller {
 
 		$photos = Photo::where('movie_id', $id)->paginate(24);
 
-		$users = Users::
+		$users = Users::where('user_id', $id)->name->
 
 		return view('movies.show', compact('movie'), compact('photos'));
 	}
