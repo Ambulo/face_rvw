@@ -6,11 +6,11 @@
 	
 	<body>
 	@if (Session::has("message"))
-	    {{ Session::get("message") }}
+	    {!! Session::get("message") !!}
 	@endif
 	<hr />
-	{{ Form::open(array('url' => '/', 'files' => true)) }}
-	{{ Form::file('image'); }}
-	{{ Form::submit('Upload File'); }}
+	{!! Form::open(array('url' => '/', 'files' => true)) !!}
+	{!! Form::file('image') !!}
+	{!! Form::submit('Upload File') !!}
 	</body>
 </html>

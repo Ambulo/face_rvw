@@ -19,6 +19,8 @@ Route::get('upload', function(){
 	return View::make('photos.create');
 });
 
+Route::post('apply/upload', 'ApplyController@upload');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

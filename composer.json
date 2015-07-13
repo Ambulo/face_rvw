@@ -14,7 +14,7 @@
 		"fzaninotto/faker": "1.5.*@dev",
 		"illuminate/html": "5.0.*@dev",
 		"aws/aws-sdk-php-laravel": "dev-master",
-		"guzzlehttp/guzzle": "5.0.*@dev"
+		"guzzlehttp/guzzle": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

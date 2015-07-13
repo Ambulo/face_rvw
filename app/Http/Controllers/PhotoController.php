@@ -31,7 +31,7 @@ class PhotoController extends Controller {
 	 */
 	public function create()
 	{
-		  // getting all of the post data
+	  // getting all of the post data
 	  $file = array('image' => Input::file('image'));
 	  // setting up rules
 	  $rules = array('image' => 'required',); //mimes:jpeg,bmp,png and for max size max:10000

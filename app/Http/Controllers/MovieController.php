@@ -19,7 +19,7 @@ class MovieController extends Controller {
 	 */
 	public function index()
 	{
-		$movies = Movie::paginate(24);
+		$movies = Movie::has('photos')->paginate(24);
 
 		return view('movies.index', compact('movies'));
 	}
@@ -35,8 +35,6 @@ class MovieController extends Controller {
 		$movie = Movie::findOrFail($id);
 
 		$photos = Photo::where('movie_id', $id)->paginate(24);
-
-		$users = Users::where('user_id', $id)->name->
 
 		return view('movies.show', compact('movie'), compact('photos'));
 	}

@@ -5,7 +5,21 @@
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1">
 			<div class="panel panel-default">
-				<div class="panel-heading">Movies</div>
+				<div class="panel-heading text-center">
+					<div class="dropdown pull-right">
+					    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+					    	Sort By <span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">Oldest First</a></li>
+					      <li><a href="#">Newest first</a></li>
+					      <li><a href="#">Most Reviews</a></li>
+					      <li><a href="#">Most Ratings</a></li>
+					    </ul>
+					</div>
+					<h3>Movies</h3>
+				</div>
+				
 					<div class="row">
 
 						<?php $i = 0 ?>
